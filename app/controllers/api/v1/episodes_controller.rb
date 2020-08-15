@@ -6,9 +6,7 @@ class Api::V1::EpisodesController < ApplicationController
   end
 
   def show
-  # binding.pry
   @episodes = Show.find(params[:id]).episodes
-  # binding.pry
   render json: { episodeData: @episodes }
   end
 end
