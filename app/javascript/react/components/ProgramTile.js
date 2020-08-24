@@ -25,6 +25,32 @@ for(var i=0; i < 4; i++) {
   }
 }
 
+function suggestRerun(show_id, season_num) {
+  fetch(`/api/v1/episodes/${show_id}/rerun`, {
+    method: "POST",
+    credentials: "same-origin",
+    body: JSON.stringify(season_num),
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  })
+  .then(response => {
+    if (response.ok) {
+      return response
+    } else {
+      const errorMessage = `${response.status} (${response.statusText})`
+      const error = new Error(errorMessage)
+      throw error
+    }
+  })
+  .then(response => response.json())
+  .then(body => {
+    let data = body;
+  })
+  .catch(error => console.error(`Error in fetch: ${error.message}`))
+}
+
 const formatDate = function(input) {
   const pattern = /(\d{4})\-(\d{2})\-(\d{2})/;
   if (!input || !input.match(pattern)) {
@@ -50,6 +76,11 @@ let formattedDate = formatDate(friday_date)
             {episodes[0].synopsis}<br/>
             <h2>Close</h2></div>}
         /></div>
+        <div>
+          <button className="button primary" onClick={suggestRerun(1, 2)}>
+            Rerun
+          </button>
+        </div>
         <div id="program-block-2" className="time-show">8:30 - {slot_830pm}</div>
         <div id="program-block-2" className="episode-name">
           <MicroModal 
