@@ -13,10 +13,9 @@ class Api::V1::EpisodesController < ApplicationController
   end
 
   def rerun
-    @season = params[:_json]
-    if @season = 1 do
-      @season = 2
-    end
-    @episodes = Show.find(params[:id]).episodes.where(season: (@season - 1))
+    @fridayDate = params[:_json]
+    @episodes = Show.find(params[:id]).episodes.where("original_air_date" < @fridayDate)
+    @rerunEpisode = @episodes.sample
+    render json: { rerunEpisode: @rerunEpisode}
   end
 end
