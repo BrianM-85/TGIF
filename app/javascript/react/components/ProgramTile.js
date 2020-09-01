@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import MicroModal from 'react-micro-modal';
 
-const ProgramTile = ({ alternatingClass, episodes, week_num, friday_date, slot_8pm, slot_830pm, slot_9pm, slot_930pm }) => {
+const ProgramTile = ({ index, setEpisodes, alternatingClass, episodes, week_num, friday_date, slot_8pm, slot_830pm, slot_9pm, slot_930pm }) => {
+
+// const [getWeekEpisodes, setWeekEpisodes] = useState(episodes);
 
 let timeArray = [slot_8pm, slot_830pm, slot_9pm, slot_930pm]
 
@@ -48,7 +50,14 @@ function suggestRerun(show_id, original_air_date, array_index) {
   .then(response => response.json())
   .then(body => {
     let data = body;
-    // let episode_data = data.rerunEpisode
+    let episode_data = data.rerunEpisode
+    // setEpisodes({...getEpisodes,
+    //   getEpisodes[index][array_index]: episode_data 
+    // })
+
+    // setWeekEpisodes({...getWeekEpisodes,
+    //   getWeekEpisodes[0]: episode_data
+    // })
     // episodes[array_index].formatting =  `(Rerun)${episode_data.name} - S${episode_data.season}E${episode_data.episode_num}`
     // episodes[array_index].modal_show_name = `${episode_data.show_name} - ${episode_data.name}`
     // episodes[array_index].modal_season_ep = `(Rerun) Season ${episode_data.season} - Episode ${episode_data.episode_num}`

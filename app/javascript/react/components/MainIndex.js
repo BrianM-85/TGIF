@@ -66,6 +66,7 @@ const MainIndex = (props) => {
     return (
       <ProgramTile
       key={week.id}
+      index={index}
       episodes={episodes}
       week_num={week.week_num}
       friday_date={week.friday_date}
@@ -74,6 +75,7 @@ const MainIndex = (props) => {
       slot_9pm={week.slot_9pm}
       slot_930pm={week.slot_930pm}
       alternatingClass={alternatingClass}
+      setEpisodes={setEpisodes}
       />
     );
   });
