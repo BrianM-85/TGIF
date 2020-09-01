@@ -3,15 +3,11 @@ import { Link } from "react-router-dom";
 import ProgramTile from "./ProgramTile";
 
 const MainIndex = (props) => {
-  const [getEpisodes, setEpisodes] = useState([]);
-  const [getWeeks, setWeeks] = useState([]);
-  
   const [getProgramData, setProgramData] = useState({
     episodes: [],
     weeks: [],
     tutorial: ""
   })
-
 
   const [getYear, setYear] = useState("None");
 
