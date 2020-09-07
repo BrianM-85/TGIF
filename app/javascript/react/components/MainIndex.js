@@ -14,7 +14,6 @@ const MainIndex = (props) => {
 
   function handleYearChange(event) {
     setYear(event.target.value);
-    debugger
   }
   
   const handleSubmit = () => {
@@ -73,6 +72,8 @@ const MainIndex = (props) => {
       slot_9pm={week.slot_9pm}
       slot_930pm={week.slot_930pm}
       alternatingClass={alternatingClass}
+      setProgramData={setProgramData}
+      getProgramData={getProgramData}
       />
     );
   });
