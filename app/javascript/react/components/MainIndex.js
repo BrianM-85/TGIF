@@ -3,20 +3,18 @@ import { Link } from "react-router-dom";
 import ProgramTile from "./ProgramTile";
 
 const MainIndex = (props) => {
-  const [getEpisodes, setEpisodes] = useState([]);
-  const [getWeeks, setWeeks] = useState([]);
-  
+
   const [getProgramData, setProgramData] = useState({
     episodes: [],
     weeks: [],
     tutorial: ""
   })
 
-
   const [getYear, setYear] = useState("None");
 
   function handleYearChange(event) {
     setYear(event.target.value);
+    debugger
   }
   
   const handleSubmit = () => {
@@ -75,7 +73,6 @@ const MainIndex = (props) => {
       slot_9pm={week.slot_9pm}
       slot_930pm={week.slot_930pm}
       alternatingClass={alternatingClass}
-      setEpisodes={setEpisodes}
       />
     );
   });
