@@ -26,11 +26,8 @@ for(var i=0; i < 4; i++) {
       episodes[i].show_id = show_id
       episodes[i].modal_season_ep = "Rerun"
       episodes[i].rerun_button = 
-      <div id="rerun-button">
-        <button className="button primary" title="Get a suggested rerun" onClick={() => suggestRerun(show_id, friday_date, index)}>
-          Rerun
-        </button>
-      </div>
+        <i className="fi-refresh" title="Get a suggested rerun" onClick={() => suggestRerun(show_id, friday_date, index)}>
+        </i>
     }
     else {
       if (episodes[i].formatting != "Rerun" ) {
@@ -43,7 +40,6 @@ for(var i=0; i < 4; i++) {
   }
 
 function suggestRerun(show_id, friday_date, episode_array_index) {
-  debugger
   fetch(`/api/v1/episodes/${show_id}/rerun`, {
     method: "POST",
     credentials: "same-origin",
@@ -94,47 +90,47 @@ let formattedDate = formatDate(friday_date)
         <div id="program-block-1" className="episode-name">
           <MicroModal 
           containerStyles={{ background: '#24c4db' }}
-          trigger={handleOpen => <div onClick={handleOpen}>{episodes[0].formatting}{episodes[0].rerun_button}</div>}
+          trigger={handleOpen => <div onClick={handleOpen}>{episodes[0].formatting}</div>}
           children={handleClose => <div onClick={handleClose}>
             <h3>{episodes[0].modal_show_name}</h3>
             {episodes[0].modal_season_ep}<br/>
             {episodes[0].synopsis}<br/>
             <h2>Close</h2></div>}
-        /></div>
+        />
+        <span>{episodes[0].rerun_button}</span></div>
         <div id="program-block-2" className="time-show">8:30 - {slot_830pm}</div>
         <div id="program-block-2" className="episode-name">
           <MicroModal 
           containerStyles={{ background: '#24c4db' }}
-          trigger={handleOpen => <div onClick={handleOpen}>{episodes[1].formatting}{episodes[1].rerun_button}</div>}
+          trigger={handleOpen => <div onClick={handleOpen}>{episodes[1].formatting}</div>}
           children={handleClose => <div onClick={handleClose}>
             <h3>{episodes[1].modal_show_name}</h3>
             {episodes[1].modal_season_ep}<br/>
             {episodes[1].synopsis}<br/>
             <h2>Close</h2></div>}
-        /></div>
-        <i class="fi-refresh" />
+        />{episodes[1].rerun_button}</div>
         <div id="program-block-1" className="time-show">9:00 - {slot_9pm}</div>
         <div id="program-block-1" className="episode-name">
           <MicroModal 
           containerStyles={{ background: '#24c4db' }}
-          trigger={handleOpen => <div onClick={handleOpen}>{episodes[2].formatting}{episodes[2].rerun_button}</div>}
+          trigger={handleOpen => <div onClick={handleOpen}>{episodes[2].formatting}</div>}
           children={handleClose => <div onClick={handleClose}>
             <h3>{episodes[2].modal_show_name}</h3>
             {episodes[2].modal_season_ep}<br/>
             {episodes[2].synopsis}<br/>
             <h2>Close</h2></div>}
-        /></div>
+        />{episodes[2].rerun_button}</div>
         <div id="program-block-2" className="time-show">9:30 - {slot_930pm}</div>
         <div id="program-block-2" className="episode-name">
           <MicroModal 
           containerStyles={{ background: '#24c4db' }}
-          trigger={handleOpen => <div onClick={handleOpen}>{episodes[3].formatting}{episodes[3].rerun_button}</div>}
+          trigger={handleOpen => <div onClick={handleOpen}>{episodes[3].formatting}</div>}
           children={handleClose => <div onClick={handleClose}>
           <h3>{episodes[3].modal_show_name}</h3>
           {episodes[3].modal_season_ep}<br/>
           {episodes[3].synopsis}<br/>
           <h2>Close</h2></div>}
-        /></div>
+        />{episodes[3].rerun_button}</div>
       </div>
     </div>
   );

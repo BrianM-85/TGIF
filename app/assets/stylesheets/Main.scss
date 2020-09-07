@@ -190,7 +190,13 @@ h1 a {
 }
 
 #rerun-button {
-  display: inline-block;
+  display: inline;
+}
+
+.fi-refresh {
+  display: inline;
+  color: #9d75ea;
+  margin-left: 0.5em;
 }
 
 #week-tile h5 {
