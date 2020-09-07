@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import ProgramTile from "./ProgramTile";
 
 const MainIndex = (props) => {
-
   const [getProgramData, setProgramData] = useState({
     episodes: [],
     weeks: [],
