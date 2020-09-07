@@ -63,7 +63,7 @@ const MainIndex = (props) => {
     return (
       <ProgramTile
       key={week.id}
-      index={index}
+      programIndex={index}
       episodes={episodes}
       week_num={week.week_num}
       friday_date={week.friday_date}

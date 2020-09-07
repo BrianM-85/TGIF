@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import MicroModal from 'react-micro-modal';
 import { get } from "fetch-mock";
 
-const ProgramTile = ({ getProgramData, setProgramData, index, alternatingClass, episodes, week_num, friday_date, slot_8pm, slot_830pm, slot_9pm, slot_930pm }) => {
-
-// const [getWeekEpisodes, setWeekEpisodes] = useState(episodes);
+const ProgramTile = ({ getProgramData, setProgramData, programIndex, alternatingClass, episodes, week_num, friday_date, slot_8pm, slot_830pm, slot_9pm, slot_930pm }) => {
 
 let timeArray = [slot_8pm, slot_830pm, slot_9pm, slot_930pm]
 
@@ -28,8 +26,7 @@ for(var i=0; i < 4; i++) {
   }
 }
 
-function suggestRerun(show_id, original_air_date, array_index) {
-  console.log("You pressed the rerun button")
+function suggestRerun(show_id, original_air_date, episode_array_index) {
   fetch(`/api/v1/episodes/${show_id}/rerun`, {
     method: "POST",
     credentials: "same-origin",
@@ -56,7 +53,7 @@ function suggestRerun(show_id, original_air_date, array_index) {
     rerun_episode_name = "(Suggested Rerun) " + rerun_episode_name
     episode_data.name = rerun_episode_name
     const copyData = {...getProgramData}
-    copyData.episodes[0][0] = episode_data
+    copyData.episodes[programIndex].splice(episode_array_index, 0, episode_data)
     setProgramData(copyData)
   })
   .catch(error => console.error(`Error in fetch: ${error.message}`))
