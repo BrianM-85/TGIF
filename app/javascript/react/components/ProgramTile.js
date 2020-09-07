@@ -32,11 +32,11 @@ for(var i=0; i < 4; i++) {
     }
   }
 
-function suggestRerun(show_id, original_air_date, episode_array_index) {
+function suggestRerun(show_id, friday_date, episode_array_index) {
   fetch(`/api/v1/episodes/${show_id}/rerun`, {
     method: "POST",
     credentials: "same-origin",
-    body: JSON.stringify(original_air_date),
+    body: JSON.stringify(friday_date),
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -91,7 +91,7 @@ let formattedDate = formatDate(friday_date)
             <h2>Close</h2></div>}
         /></div>
         <div>
-          <button className="button primary" onClick={() => suggestRerun(episodes[0].show_id, friday_date, 0)}>
+          <button className="button primary" title="Get a suggested rerun" onClick={() => suggestRerun(episodes[0].show_id, friday_date, 0)}>
             Rerun
           </button>
         </div>

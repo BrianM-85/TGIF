@@ -6,6 +6,7 @@ const MainIndex = (props) => {
   const [getProgramData, setProgramData] = useState({
     episodes: [],
     weeks: [],
+    shows: [],
     tutorial: ""
   })
 
@@ -41,6 +42,7 @@ const MainIndex = (props) => {
       setProgramData({...getProgramData,
         episodes: data.episodeData,
         weeks: data.weekData,
+        shows: data.showsData,
         tutorial: "Click an episode name to view details"
       })
     })
