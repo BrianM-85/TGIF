@@ -36,7 +36,7 @@ const About = (props) => {
 
       <p>This website was created to make this information available again so that fans can rewatch a specific Friday night of TGIF programming and experience the shows together! </p>
 
-      <p>There are currently <b>{getAboutData.shows}</b> shows and <b>{getAboutData.episodes}</b> episodes in the database. This represents yearly programming data up to the Spring 1995 but we hope to add additional years of show data in the near future!</p>
+      <p>There are currently <b>{getAboutData.shows}</b> shows and <b>{getAboutData.episodes}</b> episodes in the database. This represents yearly programming data up to Spring of 1995 but we hope to add additional years of show data in the near future!</p>
     </div>
   )
 }
