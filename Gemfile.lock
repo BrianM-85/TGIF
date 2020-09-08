@@ -80,6 +80,9 @@ GEM
     factory_bot (6.1.0)
       activesupport (>= 5.0.0)
     ffi (1.13.1)
+    foundation-icons-sass-rails (3.0.0)
+      railties (>= 3.1.1)
+      sass-rails (>= 3.1.1)
     foundation-rails (6.6.2.0)
       railties (>= 3.1.0)
       sass (>= 3.3.0)
@@ -237,6 +240,7 @@ DEPENDENCIES
   devise
   dotenv-rails
   factory_bot
+  foundation-icons-sass-rails
   foundation-rails (~> 6.5)
   jbuilder (~> 2.5)
   jquery-rails
