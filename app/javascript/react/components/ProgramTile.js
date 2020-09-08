@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import MicroModal from 'react-micro-modal';
-import { get } from "fetch-mock";
+
 
 const ProgramTile = ({ getProgramData, setProgramData, programIndex, alternatingClass, episodes, week_num, friday_date, slot_8pm, slot_830pm, slot_9pm, slot_930pm }) => {
 
@@ -65,8 +64,9 @@ function suggestRerun(show_id, friday_date, episode_array_index) {
     let rerun_episode_name = episode_data.name
     rerun_episode_name = "(Suggested Rerun) " + rerun_episode_name
     episode_data.name = rerun_episode_name
+    episodes.splice(episode_array_index, 1, episode_data)
     const copyData = {...getProgramData}
-    copyData.episodes[programIndex].splice(episode_array_index, 0, episode_data)
+    copyData.episodes[programIndex] = episodes
     setProgramData(copyData)
   })
   .catch(error => console.error(`Error in fetch: ${error.message}`))
