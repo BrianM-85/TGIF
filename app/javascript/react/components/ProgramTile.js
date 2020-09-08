@@ -87,22 +87,21 @@ let formattedDate = formatDate(friday_date)
       <div className="card" id={alternatingClass}>
       <h5>Friday {formattedDate}</h5>
         <div id="program-block-1" className="time-show">8:00 - {slot_8pm}</div>
-        <div id="program-block-1" className="episode-name">
+        <div id="program-block-1">
           <MicroModal 
           containerStyles={{ background: '#24c4db' }}
-          trigger={handleOpen => <div onClick={handleOpen}>{episodes[0].formatting}</div>}
+          trigger={handleOpen => <div onClick={handleOpen} className="episode-name">{episodes[0].formatting}</div>}
           children={handleClose => <div onClick={handleClose}>
             <h3>{episodes[0].modal_show_name}</h3>
             {episodes[0].modal_season_ep}<br/>
             {episodes[0].synopsis}<br/>
             <h2>Close</h2></div>}
-        />
-        <span>{episodes[0].rerun_button}</span></div>
+        />{episodes[0].rerun_button}</div>
         <div id="program-block-2" className="time-show">8:30 - {slot_830pm}</div>
-        <div id="program-block-2" className="episode-name">
+        <div id="program-block-2">
           <MicroModal 
           containerStyles={{ background: '#24c4db' }}
-          trigger={handleOpen => <div onClick={handleOpen}>{episodes[1].formatting}</div>}
+          trigger={handleOpen => <div onClick={handleOpen} className="episode-name">{episodes[1].formatting}</div>}
           children={handleClose => <div onClick={handleClose}>
             <h3>{episodes[1].modal_show_name}</h3>
             {episodes[1].modal_season_ep}<br/>
@@ -110,10 +109,10 @@ let formattedDate = formatDate(friday_date)
             <h2>Close</h2></div>}
         />{episodes[1].rerun_button}</div>
         <div id="program-block-1" className="time-show">9:00 - {slot_9pm}</div>
-        <div id="program-block-1" className="episode-name">
+        <div id="program-block-1">
           <MicroModal 
           containerStyles={{ background: '#24c4db' }}
-          trigger={handleOpen => <div onClick={handleOpen}>{episodes[2].formatting}</div>}
+          trigger={handleOpen => <div onClick={handleOpen} className="episode-name">{episodes[2].formatting}</div>}
           children={handleClose => <div onClick={handleClose}>
             <h3>{episodes[2].modal_show_name}</h3>
             {episodes[2].modal_season_ep}<br/>
@@ -121,10 +120,10 @@ let formattedDate = formatDate(friday_date)
             <h2>Close</h2></div>}
         />{episodes[2].rerun_button}</div>
         <div id="program-block-2" className="time-show">9:30 - {slot_930pm}</div>
-        <div id="program-block-2" className="episode-name">
+        <div id="program-block-2">
           <MicroModal 
           containerStyles={{ background: '#24c4db' }}
-          trigger={handleOpen => <div onClick={handleOpen}>{episodes[3].formatting}</div>}
+          trigger={handleOpen => <div onClick={handleOpen} className="episode-name">{episodes[3].formatting}</div>}
           children={handleClose => <div onClick={handleClose}>
           <h3>{episodes[3].modal_show_name}</h3>
           {episodes[3].modal_season_ep}<br/>
