@@ -10,9 +10,16 @@ Rails.application.routes.draw do
   namespace :api do 
     namespace :v1 do
       resources :shows, only: [:index, :show]
-      resources :episodes, only: [:index, :show]
+      resources :episodes do
+        member do
+          post 'rerun'
+        end
+      end
+      resources :episodes, only: [:index, :show, :rerun]
       resources :weeks, only: [:index, :show]
       resources :program_years, only: [:index, :show, :create, :new]
     end 
   end
 end
+
+
