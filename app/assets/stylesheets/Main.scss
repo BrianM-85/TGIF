@@ -183,6 +183,10 @@ h1 a {
   font-weight: bold;
 }
 
+.episode-name {
+  padding-bottom: 3px;
+}
+
 .episode-name:hover {
   color: #9d75ea;
   text-shadow: 0.5px 0.5px black;
@@ -198,7 +202,9 @@ h1 a {
 }
 
 #week-tile h5 {
+  margin-top: 5px;
   padding-left: 5px;
+  grid-auto-rows: 1fr;
 }
 
 #show-tile h5 {
