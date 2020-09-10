@@ -95,10 +95,10 @@ let formattedDate = formatDate(friday_date)
           containerStyles={{ background: '#24c4db' }}
           trigger={handleOpen => <div onClick={handleOpen} className="episode-name">{episodes[0].formatting}</div>}
           children={handleClose => <div onClick={handleClose}>
-            <h3>{episodes[0].modal_show_name}</h3>
+            <h4>{episodes[0].modal_show_name}</h4>
             {episodes[0].modal_season_ep}<br/>
             {episodes[0].synopsis}<br/>
-            <h2>Close</h2></div>}
+            <h3 id="modal-close">Close</h3></div>}
         />{episodes[0].rerun_button}</div>
         <div id="program-block-2" className="time-show">8:30 - {slot_830pm}</div>
         <div id="program-block-2">
@@ -106,10 +106,10 @@ let formattedDate = formatDate(friday_date)
           containerStyles={{ background: '#24c4db' }}
           trigger={handleOpen => <div onClick={handleOpen} className="episode-name">{episodes[1].formatting}</div>}
           children={handleClose => <div onClick={handleClose}>
-            <h3>{episodes[1].modal_show_name}</h3>
+            <h4>{episodes[1].modal_show_name}</h4>
             {episodes[1].modal_season_ep}<br/>
             {episodes[1].synopsis}<br/>
-            <h2>Close</h2></div>}
+            <h3 id="modal-close">Close</h3></div>}
         />{episodes[1].rerun_button}</div>
         <div id="program-block-1" className="time-show">9:00 - {slot_9pm}</div>
         <div id="program-block-1">
@@ -117,10 +117,10 @@ let formattedDate = formatDate(friday_date)
           containerStyles={{ background: '#24c4db' }}
           trigger={handleOpen => <div onClick={handleOpen} className="episode-name">{episodes[2].formatting}</div>}
           children={handleClose => <div onClick={handleClose}>
-            <h3>{episodes[2].modal_show_name}</h3>
+            <h4>{episodes[2].modal_show_name}</h4>
             {episodes[2].modal_season_ep}<br/>
             {episodes[2].synopsis}<br/>
-            <h2>Close</h2></div>}
+            <h3 id="modal-close">Close</h3></div>}
         />{episodes[2].rerun_button}</div>
         <div id="program-block-2" className="time-show">9:30 - {slot_930pm}</div>
         <div id="program-block-2">
@@ -128,10 +128,10 @@ let formattedDate = formatDate(friday_date)
           containerStyles={{ background: '#24c4db' }}
           trigger={handleOpen => <div onClick={handleOpen} className="episode-name">{episodes[3].formatting}</div>}
           children={handleClose => <div onClick={handleClose}>
-          <h3>{episodes[3].modal_show_name}</h3>
+          <h4>{episodes[3].modal_show_name}</h4>
           {episodes[3].modal_season_ep}<br/>
           {episodes[3].synopsis}<br/>
-          <h2>Close</h2></div>}
+          <h3 id="modal-close">Close</h3></div>}
         />{episodes[3].rerun_button}</div>
       </div>
     </div>
