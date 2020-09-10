@@ -30,7 +30,10 @@ for(var i=0; i < 4; i++) {
     }
     else {
       if (episodes[i].formatting != "Rerun" ) {
-        episodes[i].formatting = `${episodes[i].name} - S${episodes[i].season}E${episodes[i].episode_num}`
+        if (episodes[i].name.length > 34) { episodes[i].formatting = `${episodes[i].name.substring(0,32)}... - S${episodes[i].season}E${episodes[i].episode_num}`}
+        else {
+          episodes[i].formatting = `${episodes[i].name} - S${episodes[i].season}E${episodes[i].episode_num}`
+        }
         episodes[i].modal_show_name = `${episodes[i].show_name} - ${episodes[i].name}`
         episodes[i].modal_season_ep = `Season ${episodes[i].season} - Episode ${episodes[i].episode_num}`
         episodes[i].rerun_button = ""
