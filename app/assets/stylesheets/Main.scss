@@ -265,17 +265,31 @@ h3 {
 
 #about {
   position: relative;
+  text-align: left;
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 3vh;
   margin-bottom: 2vh;
   padding-left: 8%;
   padding-right: 8%;
-  padding-top: 5%;
+  padding-top: 1%;
   padding-bottom: 5%;
   border: 20px solid #9d75ea;
   border-radius: 25px;
   overflow: clip;
+}
+
+#about p {
+  text-align: left;
+}
+
+#small-tv {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: auto;
+  margin-bottom: 3%;
 }
 
 #tutorial {
