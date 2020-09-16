@@ -30,7 +30,7 @@ const About = (props) => {
 
   return (
     <div id="about"> 
-    <img src="/images/Small TV.png" id="small-tv"/>
+    <img src="/images/Small TV Orange.png" id="small-tv-about"/>
       <p>TGIF was a popular two hour television programming block that began in 1989 and ran until 2000. Each Friday night a block of four 30-minute episodes from different shows would air together.</p>
 
       <p>While many of the shows are available on Hulu.com and other streaming platforms at this point, there was not a resource online letting fans know which episodes aired together and on what specific nights.</p>

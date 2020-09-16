@@ -283,7 +283,16 @@ h3 {
   text-align: left;
 }
 
-#small-tv {
+#small-tv-main-index {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 250px;
+  width: 30%;
+  height: auto;
+}
+
+#small-tv-about {
   display: block;
   margin-left: auto;
   margin-right: auto;

@@ -81,6 +81,7 @@ const MainIndex = (props) => {
 
   return (
     <div>   
+      <img src="/images/Small TV Purple.png" id="small-tv-main-index"/>
       <label>Choose Year
         <form id="yearSelect" onSubmit={handleSubmit}>
           <select defaultValue="none" onChange={handleYearChange} id="year-select">
