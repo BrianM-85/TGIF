@@ -148,6 +148,18 @@ label {
   text-align: center;
 }
 
+#welcome-modal p{
+  text-align: left;
+}
+
+#welcome-rewind {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: auto;
+}
+
 #yearSelect {
   padding-top: 5px;
 }

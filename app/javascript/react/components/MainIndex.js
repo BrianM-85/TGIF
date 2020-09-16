@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ProgramTile from "./ProgramTile";
+import Welcome from "./Welcome"
 
 const MainIndex = (props) => {
   const [getProgramData, setProgramData] = useState({
@@ -81,6 +82,7 @@ const MainIndex = (props) => {
 
   return (
     <div>   
+      <Welcome />
       <img src="/images/Small TV Purple.png" id="small-tv-main-index"/>
       <label>Choose Year
         <form id="yearSelect" onSubmit={handleSubmit}>
