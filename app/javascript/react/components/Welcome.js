@@ -25,7 +25,7 @@ const Welcome = (props) => {
             <ol>
             <li>To view schedule informaton simply select a year and press Go.</li>
             <li>To view details about an episode tap the episode name.</li>
-            <li>If a Rerun ran on the Friday you are viewing tap the <i className="fi-refresh" /> icon to have a rerun automatically suggested for you from past seasons & episodes.</li>
+            <li>If a Rerun ran on the Friday you are viewing tap the<i className="fi-refresh" /> icon to have a rerun automatically suggested for you from past seasons & episodes.</li>
             <li>Have fun!</li>
             </ol>
             <h3 id="modal-close">Close</h3></div>}
