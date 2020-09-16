@@ -22,10 +22,12 @@ const Welcome = (props) => {
             <h3>Welcome to the TGIF Time Machine!</h3>
             <p>Use this website to view <i>actual</i> schedule data from TGIF from 1989-1996.</p>  
             <p>When combined with streaming services like Hulu.com you can recreate and watch a night of television from the past!</p>
-            <p>To view schedule informaton simply select a year and press Go.</p>
-            <p>To view details about an episode tap the episode name.</p>
-            <p>If a Rerun ran on the Friday you are viewing tap the RERUN icon to have a rerun automatically suggested for you from past seasons & episodes!</p>
-            <p>Have fun!</p>
+            <ol>
+            <li>To view schedule informaton simply select a year and press Go.</li>
+            <li>To view details about an episode tap the episode name.</li>
+            <li>If a Rerun ran on the Friday you are viewing tap the <i className="fi-refresh" /> icon to have a rerun automatically suggested for you from past seasons & episodes.</li>
+            <li>Have fun!</li>
+            </ol>
             <h3 id="modal-close">Close</h3></div>}
         />
     </div>
