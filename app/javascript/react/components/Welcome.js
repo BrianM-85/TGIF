@@ -8,17 +8,13 @@ const Welcome = (props) => {
 
   useEffect(() => {
     if (storedValues === "visited") {
-      setOpen(false)
+      setOpen(true)
     }
     else {
       setOpen(true)
-    }
+      localStorage.setItem("TGIFLocalStorageValues", JSON.stringify("visited"))
+      }
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem("TGIFLocalStorageValues", JSON.stringify("visited"));
-  }, []);
-
 
   return (
     <div>
@@ -29,7 +25,7 @@ const Welcome = (props) => {
           handleClose={() => setOpen(false)}
           children={handleClose => <div onClick={handleClose}>
             <img src="/images/Rewind.png" id="welcome-rewind"/>
-            <h3>Welcome to the TGIF Time Machine!</h3>
+            <h3>Welcome to the <span id="welcome-tgif-name">TGIF</span> Time Machine!</h3>
             <p>Use this website to view historical schedule data from TGIF from 1989-1996.</p>  
             <p>When combined with streaming services like Hulu.com you can recreate and watch a night of television from the past!</p>
             <ol>
