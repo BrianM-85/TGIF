@@ -20,7 +20,7 @@ const Welcome = (props) => {
           children={handleClose => <div onClick={handleClose}>
             <img src="/images/Rewind.png" id="welcome-rewind"/>
             <h3>Welcome to the TGIF Time Machine!</h3>
-            <p>Use this website to view <i>actual</i> schedule data from TGIF from 1989-1996.</p>  
+            <p>Use this website to view historical schedule data from TGIF from 1989-1996.</p>  
             <p>When combined with streaming services like Hulu.com you can recreate and watch a night of television from the past!</p>
             <ol>
             <li>To view schedule informaton simply select a year and press Go.</li>
