@@ -4,10 +4,20 @@ import MicroModal from 'react-micro-modal';
 const Welcome = (props) => {
   const [open, setOpen] = useState(false)
 
+  var storedValues = JSON.parse(localStorage.getItem("TGIFLocalStorageValues"));
+
   useEffect(() => {
-    setOpen(true)
+    if (storedValues === "visited") {
+      setOpen(false)
+    }
+    else {
+      setOpen(true)
+    }
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem("TGIFLocalStorageValues", JSON.stringify("visited"));
+  }, []);
 
 
   return (
