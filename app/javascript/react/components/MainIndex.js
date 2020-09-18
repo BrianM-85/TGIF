@@ -8,7 +8,6 @@ const MainIndex = (props) => {
     episodes: [],
     weeks: [],
     shows: [],
-    tutorial: ""
   })
 
   const [getYear, setYear] = useState("None");
@@ -44,7 +43,6 @@ const MainIndex = (props) => {
         episodes: data.episodeData,
         weeks: data.weekData,
         shows: data.showsData,
-        tutorial: "Click an episode name to view details"
       })
     })
     .catch(error => console.error(`Error in fetch: ${error.message}`))
@@ -98,9 +96,6 @@ const MainIndex = (props) => {
           <button type="submit" className="button secondary" value="Submit" form="yearSelect">Go</button>
         </form>
       </label>
-          <div id="tutorial">
-            {getProgramData.tutorial}
-          </div>
           <div className="grid-container">
             <div className="grid-x grid-margin-x small-up-1 medium-up-2 large-up-3">
               {selectedWeeks}
