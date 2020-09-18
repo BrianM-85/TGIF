@@ -8,7 +8,7 @@ const Welcome = (props) => {
 
   useEffect(() => {
     if (storedValues === "visited") {
-      setOpen(true)
+      setOpen(false)
     }
     else {
       setOpen(true)
