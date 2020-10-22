@@ -28,7 +28,7 @@ pizza_place = Show.create(name: "Two Guys, a Girl, and a Pizza Place", descripti
 brothers_keeper = Show.create(name: "Brother's Keeper", description: "The series centers around Porter Waide, a milquetoast college History professor and widowed single father, raising his son, Oscar, by himself until his brother, Bobby, a football placekicker who had just been signed to play with the San Francisco 49ers and has a reputation for being a bad boy, moves in with his brother and nephew, as part of a stipulation in his new multimillion-dollar contract in which Bobby has to live with someone who is more responsible than him, in order to change his troublemaking ways.", image_url: "")
 the_hughleys = Show.create(name: "The Hughley's", description: "Darryl Hughley, who owns his own vending machine business, moving out of from South Central to West Hills, a predominately white neighborhood within the San Fernando Valley. Darryl and his family try to adjust to living in an all-white area, at the same time trying to not forget who they are and where they came from.", image_url: "")
 odd_man_out = Show.create(name: "Odd Man Out", description: "Set around fifteen-year-old Andrew Whitney, the only male in a house full of females. He is constantly surrounded by his three sisters (Val, Paige, and Elizabeth), Aunt Jordan, and widowed mom, Julia.", image_url: "")
-
+making_the_band = Show.create(name: "Making the Band", description: "The final show introduced to TGIF was a reality TV show created by ABC & MTV about forming a boy band called O-Town.", image_url: "")
 
 
 
@@ -39,12 +39,11 @@ ProgramYear.create(name: 'Fall 1991 - Spring 1992', start_date: '1991-09-20', en
 ProgramYear.create(name: 'Fall 1992 - Spring 1993', start_date: '1992-09-18', end_date: '1993-05-21')
 ProgramYear.create(name: 'Fall 1993 - Spring 1994', start_date: '1993-09-24', end_date: '1994-05-20')
 ProgramYear.create(name: 'Fall 1994 - Spring 1995', start_date: '1994-09-23', end_date: '1995-05-19')
-#Must update start and end date for added years
 ProgramYear.create(name: 'Fall 1995 - Spring 1996', start_date: '1995-09-22', end_date: '1996-05-17')
-ProgramYear.create(name: 'Fall 1996 - Spring 1997', start_date: '1996-09-20', end_date: '1997-05-09')
-ProgramYear.create(name: 'Fall 1997 - Spring 1998', start_date: '1997-10-03', end_date: '1998-05-15')
-ProgramYear.create(name: 'Fall 1998 - Spring 1999', start_date: '1998-09-25', end_date: '1999-05-14')
-ProgramYear.create(name: 'Fall 1999 - Spring 2000', start_date: '1999-09-24', end_date: '2000-05-05')
+ProgramYear.create(name: 'Fall 1996 - Spring 1997', start_date: '1996-09-20', end_date: '1997-08-15')
+ProgramYear.create(name: 'Fall 1997 - Spring 1998', start_date: '1997-10-03', end_date: '1998-07-24')
+ProgramYear.create(name: 'Fall 1998 - Spring 1999', start_date: '1998-09-25', end_date: '1999-05-21')
+ProgramYear.create(name: 'Fall 1999 - Spring 2000', start_date: '1999-09-24', end_date: '2000-05-19')
 
 #weeks
 weeks_csv_text = File.read(Rails.root.join('db', 'TGIF Weeks.csv'))
