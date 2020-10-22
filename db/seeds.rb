@@ -17,6 +17,20 @@ boy_meets_world = Show.create(name: "Boy Meets World", description: "An adolesce
 hangin_with_mr_cooper = Show.create(name: "Hangin' with Mr. Cooper", description: "Life couldn't be better for Mark Cooper. He's charming, funny, playful and athletic--a really great guy ... And he'll be the first to tell you so! Just out of school and on his own for the first time, Mark shares a house with two beautiful women. The former college basketball superstar and ultimate prankster also happens to be the coolest substitute teacher around in Hangin' With Mr. Cooper.", image_url: "/images/Hangin with Logo.jpg")
 sister_sister = Show.create(name: "Sister, Sister", description: "Sister, Sister is a half-hour comedy series which chronicles the adventures of a reunited set of identical twins, Tia Landry and Tamera Campbell. The teens live with their adoptive parents, conservative businessman Ray Campbell and brassy, outspoken Lisa Landry in the suburbs of Detroit. Together, this unconventional blended family is learning lessons in life, laughter and love.", image_url: "/images/Sister Sister Logo.jpg")
 on_our_own = Show.create(name: "On Our Own", description: "When the seven Jerrico siblings are left orphaned by a tragic accident, eldest brother Josh takes charge, determined that the family won't be split up and put into foster care.", image_url: "/images/On Our Own Logo.jpg")
+muppets_tonight = Show.create(name: "Muppets Tonight", description: "Kermit the Frog, Clifford and friends struggle to put on a weekly TV variety show.", image_url: "")
+aliens = Show.create(name: "Aliens in the Family", description: "Doug Brody is kidnapped by an alien mom named Cookie. They marry and hilariously try to blend their blended family into everyday life. The aliens were puppets designed by Jim Henson's Creature Shop.", image_url: "")
+sabrina = Show.create(name: "Sabrina the Teenage Witch", description: "Sabrina is a normal teenager, except for one thing -- she's a witch! Guided by her aunts, who come from a long line of witches, and Salem, a mischievous warlock doing penance as a black cat, Sabrina continually struggles to harness her powers while wittingly wreaking havoc on friends and foes alike. While struggling through the growing pains associated with being a witch and getting into lots of harmless trouble along the way, Sabrina realizes that magic is not quite as easy as pointing your finger.", image_url: "")
+clueless = Show.create(name: "Clueless", description: "A follow-up to the blockbuster movie of the same name, following the rich teenager Cher and her friends as they attend high school in Beverly Hills.", image_url: "")
+you_wish = Show.create(name: "You Wish", description: "A single mother reluctantly accepts the services of a genie, who's been imprisoned in a magic carpet for two thousand years.", image_url: "")
+teen_angel = Show.create(name: "Teen Angel", description: "After eating a six-month-old hamburger, Marty DePolo dies and God's Cousin Rod appoints him as his best friend's guardian angel.", image_url: "URL")
+two_of_a_kind = Show.create(name: "Two of a Kind", description: "A show about a single father who has his hands full raising twin sisters Mary-Kate and Ashley.", image_url: "")
+pizza_place = Show.create(name: "Two Guys, a Girl, and a Pizza Place", description: "Three twenty-somethings share a Boston apartment and hang around (and work) at a pizza place.", image_url: "URL")
+brothers_keeper = Show.create(name: "Brother's Keeper", description: "The series centers around Porter Waide, a milquetoast college History professor and widowed single father, raising his son, Oscar, by himself until his brother, Bobby, a football placekicker who had just been signed to play with the San Francisco 49ers and has a reputation for being a bad boy, moves in with his brother and nephew, as part of a stipulation in his new multimillion-dollar contract in which Bobby has to live with someone who is more responsible than him, in order to change his troublemaking ways.", image_url: "")
+the_hughleys = Show.create(name: "The Hughley's", description: "Darryl Hughley, who owns his own vending machine business, moving out of from South Central to West Hills, a predominately white neighborhood within the San Fernando Valley. Darryl and his family try to adjust to living in an all-white area, at the same time trying to not forget who they are and where they came from.", image_url: "")
+odd_man_out = Show.create(name: "Odd Man Out", description: "Set around fifteen-year-old Andrew Whitney, the only male in a house full of females. He is constantly surrounded by his three sisters (Val, Paige, and Elizabeth), Aunt Jordan, and widowed mom, Julia.", image_url: "")
+
+
+
 
 #program years
 ProgramYear.create(name: 'Fall 1989 - Spring 1990', start_date: '1989-09-22', end_date: '1990-05-04')
@@ -26,11 +40,11 @@ ProgramYear.create(name: 'Fall 1992 - Spring 1993', start_date: '1992-09-18', en
 ProgramYear.create(name: 'Fall 1993 - Spring 1994', start_date: '1993-09-24', end_date: '1994-05-20')
 ProgramYear.create(name: 'Fall 1994 - Spring 1995', start_date: '1994-09-23', end_date: '1995-05-19')
 #Must update start and end date for added years
-ProgramYear.create(name: 'Fall 1995 - Spring 1996', start_date: '1994-09-23', end_date: '1995-05-19')
-ProgramYear.create(name: 'Fall 1996 - Spring 1997', start_date: '1994-09-23', end_date: '1995-05-19')
-ProgramYear.create(name: 'Fall 1997 - Spring 1998', start_date: '1994-09-23', end_date: '1995-05-19')
-ProgramYear.create(name: 'Fall 1998 - Spring 1999', start_date: '1994-09-23', end_date: '1995-05-19')
-ProgramYear.create(name: 'Fall 1999 - Spring 2000', start_date: '1994-09-23', end_date: '1995-05-19')
+ProgramYear.create(name: 'Fall 1995 - Spring 1996', start_date: '1995-09-22', end_date: '1996-05-17')
+ProgramYear.create(name: 'Fall 1996 - Spring 1997', start_date: '1996-09-20', end_date: '1997-05-09')
+ProgramYear.create(name: 'Fall 1997 - Spring 1998', start_date: '1997-10-03', end_date: '1998-05-15')
+ProgramYear.create(name: 'Fall 1998 - Spring 1999', start_date: '1998-09-25', end_date: '1999-05-14')
+ProgramYear.create(name: 'Fall 1999 - Spring 2000', start_date: '1999-09-24', end_date: '2000-05-05')
 
 #weeks
 weeks_csv_text = File.read(Rails.root.join('db', 'TGIF Weeks.csv'))
