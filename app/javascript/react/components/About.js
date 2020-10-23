@@ -37,7 +37,7 @@ const About = (props) => {
 
       <p>This website was created to make this information available again so that fans can recreate and watch Friday nights of TGIF programming from the past! </p>
 
-      <p>There are currently <b>{getAboutData.shows}</b> shows and <b>{getAboutData.episodes}</b> episodes in the database. This represents yearly programming data up to Spring of 1995 but we hope to add additional years of show data in the near future!</p>
+      <p>There are currently <b>{getAboutData.shows}</b> shows and <b>{getAboutData.episodes}</b> episodes in the database. This represents yearly programming data for TGIF's entire original run from 1989-2000!</p>
 
       <p>The site was created by Brian Manhard. <a href="https://www.linkedin.com/in/brianmanhard/"><img src="/images/LinkedIn.png" id="linked-in" /></a></p>
     </div>

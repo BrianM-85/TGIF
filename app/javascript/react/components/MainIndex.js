@@ -92,6 +92,11 @@ const MainIndex = (props) => {
             <option value="4" >Fall 1992 - Spring 1993</option>
             <option value="5" >Fall 1993 - Spring 1994</option>
             <option value="6" >Fall 1994 - Spring 1995</option>
+            <option value="7" >Fall 1995 - Spring 1996</option>
+            <option value="8" >Fall 1996 - Spring 1997</option>
+            <option value="9" >Fall 1997 - Spring 1998</option>
+            <option value="10" >Fall 1998 - Spring 1999</option>
+            <option value="11" >Fall 1999 - Spring 2000</option>
           </select>
           <button type="submit" className="button secondary" value="Submit" form="yearSelect">Go</button>
         </form>

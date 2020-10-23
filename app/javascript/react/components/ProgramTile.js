@@ -6,6 +6,8 @@ const ProgramTile = ({ getProgramData, setProgramData, programIndex, alternating
 
 let timeArray = [slot_8pm, slot_830pm, slot_9pm, slot_930pm]
 
+episodes = episodes.filter(episode => timeArray.includes(episode.show_name))
+
 if (!episodes.some(episode => episode.formatting === "Rerun")) {
   episodes.sort(function(a, b){
     return timeArray.indexOf(a.show_name) - timeArray.indexOf(b.show_name)
