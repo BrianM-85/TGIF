@@ -43,7 +43,7 @@ ProgramYear.create(name: 'Fall 1995 - Spring 1996', start_date: '1995-09-22', en
 ProgramYear.create(name: 'Fall 1996 - Spring 1997', start_date: '1996-09-20', end_date: '1997-08-15')
 ProgramYear.create(name: 'Fall 1997 - Spring 1998', start_date: '1997-10-03', end_date: '1998-07-24')
 ProgramYear.create(name: 'Fall 1998 - Spring 1999', start_date: '1998-09-25', end_date: '1999-05-21')
-ProgramYear.create(name: 'Fall 1999 - Spring 2000', start_date: '1999-09-24', end_date: '2000-05-19')
+ProgramYear.create(name: 'Fall 1999 - Spring 2000', start_date: '1999-09-24', end_date: '2000-05-05')
 
 #weeks
 weeks_csv_text = File.read(Rails.root.join('db', 'TGIF Weeks.csv'))
