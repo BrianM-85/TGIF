@@ -26,7 +26,7 @@ const Welcome = (props) => {
           children={handleClose => <div onClick={handleClose}>
             <img src="/images/RewindIcon.png" id="welcome-rewind"/>
             <h3>Welcome to the <span id="welcome-tgif-name">TGIF</span> Time Machine!</h3>
-            <p>The internet's first and only source of historical schedule data from TGIF from 1989-1996.</p>  
+            <p>The internet's first and only source of historical schedule data from TGIF's original run from 1989-2000.</p>  
             <p>When combined with streaming services like Hulu.com you can recreate and watch a night of television from the past!</p>
             <ol>
             <li>To view schedule informaton simply select a year and press Go.</li>
