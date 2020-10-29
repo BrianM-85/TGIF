@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_08_05_172524) do
     t.integer "season", null: false
     t.date "original_air_date", null: false
     t.text "synopsis", null: false
+    t.text "tag"
     t.index ["show_id"], name: "index_episodes_on_show_id"
   end
 

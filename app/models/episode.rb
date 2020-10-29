@@ -6,6 +6,7 @@ class Episode < ApplicationRecord
   validates :season, presence: true
   validates :original_air_date, presence: true
   validates :synopsis, presence: true
+  validates :tag, allow_blank: true, inclusion: { in: ["Halloween", "Thanksgiving", "Christmas", "NYE", "Valentines"] }
 
   belongs_to :show
 end

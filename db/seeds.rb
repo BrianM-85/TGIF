@@ -30,8 +30,6 @@ the_hughleys = Show.create(name: "The Hughley's", description: "Darryl Hughley, 
 odd_man_out = Show.create(name: "Odd Man Out", description: "Set around fifteen-year-old Andrew Whitney, the only male in a house full of females. He is constantly surrounded by his three sisters (Val, Paige, and Elizabeth), Aunt Jordan, and widowed mom, Julia.", image_url: "/images/Odd Man Out Logo.JPG")
 making_the_band = Show.create(name: "Making the Band", description: "The final show introduced to TGIF was a reality TV show created by ABC & MTV about forming a boy band called O-Town.", image_url: "/images/Making the Band Logo.JPG")
 
-
-
 #program years
 ProgramYear.create(name: 'Fall 1989 - Spring 1990', start_date: '1989-09-22', end_date: '1990-05-04')
 ProgramYear.create(name: 'Fall 1990 - Spring 1991', start_date: '1990-09-21', end_date: '1991-05-03')
@@ -72,6 +70,7 @@ episodes_text.each do |row|
   e.name = row['name']
   e.original_air_date = row['original_air_date']
   e.synopsis = row['synopsis']
+  e.tag = row['tag']
   e.save
 end
 

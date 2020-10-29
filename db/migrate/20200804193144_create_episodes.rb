@@ -9,6 +9,7 @@ class CreateEpisodes < ActiveRecord::Migration[5.2]
       t.integer :season, null: false
       t.date :original_air_date, null: false
       t.text :synopsis, null: false
+      t.text :tag
     end
   end
 end
