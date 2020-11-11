@@ -15,8 +15,11 @@ Rails.application.routes.draw do
         member do
           post 'rerun'
         end
+        collection do
+          get 'holiday'
+        end
       end
-      resources :episodes, only: [:index, :show, :rerun]
+      resources :episodes, only: [:index, :show, :rerun, :holiday]
       resources :weeks, only: [:index, :show]
       resources :program_years, only: [:index, :show, :create, :new]
     end 

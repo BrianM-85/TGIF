@@ -8,8 +8,8 @@ class Api::V1::EpisodesController < ApplicationController
   end
 
   def show
-  @episodes = Show.find(params[:id]).episodes
-  render json: { episodeData: @episodes }
+    @episodes = Show.find(params[:id]).episodes
+    render json: { episodeData: @episodes }
   end
 
   def rerun
@@ -18,5 +18,10 @@ class Api::V1::EpisodesController < ApplicationController
     episodes = Show.find(params[:id]).episodes.where("original_air_date < ?", @fridayDateParsed)
     rerunEpisode = episodes.sample
     render json: { rerunEpisode: rerunEpisode}
+  end
+
+  def holiday
+    @episodes = Episode.where.not(tag: nil)
+    render json: {holidayEpisodes: @episodes}
   end
 end
