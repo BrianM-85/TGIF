@@ -74,6 +74,3 @@ episodes_text.each do |row|
   e.synopsis = row['synopsis']
   e.save
 end
-
-
-
